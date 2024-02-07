@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Odin Project Library</title>
+    <link rel="stylesheet" href="library-style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="top">
+                <div>Search Bar</div>
+                <div>User Info</div>
+            </div>
+            <div class="bottom">
+                <div class="logo">
+                    <div>LogoIMG</div>
+                </div>
+                <div class="greeting">greeting</div>
+                <div class="actions">
+                    <button id="book-entry-btn">New Book</button>
+                    <button>Remove Book</button>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div>Dashboard</div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Communities</a></li>
+                </ul>
+            </div>
+            <div class="utilities">
+                <ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="box1">
+                <h2>My Library Books</h2>
+                <div class="bookcards"></div>
+            </div>
+            <div class="box2">
+                <h2>Description</h2>
+                <div class="description"></div>
+            </div>
+            <div class="box3">
+                <h3>Other Books by the Author</h3>
+                <div class="otherbooks"></div>
+            </div>
+        </div>
+    </div>
+    <dialog id="book-entry-modal" class="modal">
+        <div class="modal-content">
+            <button id="closeBtn" class="close">&times;</button>
+            <form id="newBookForm">
+                <!-- Form inputs go here -->
+                <p> Please complete for a new book entry.</p>
+                <div>
+                    <label for="title-new">Title:</label>
+                    <input type="text" id="title-new" name="title-new" required>
+                </div>
+                <div>
+                    <label for="author-new">Author:</label>
+                    <input type="text" id="author-new" name="author-new" required>
+                </div>
+                <div>
+                    <label for="page-count-new">Page Count:</label>
+                    <input type="text" id="page-count-new" name="page-count-new" required>
+                </div>
+                <div>
+                    <label for="description-new">Description:</label>
+                    <textarea type="text" id="description-new" name="description-new" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </dialog>
+    <script src="library-app.js"></script>
+</body>
+</html>

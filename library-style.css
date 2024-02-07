@@ -1,0 +1,180 @@
+:root {
+    --accent-bgcolor: #1C6EA4;
+    --accent-color: white;
+    --content-color: lightcyan;
+    --font-family: fantasy;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--content-color);
+}
+
+.actions button {
+    background-color: var(--accent-bgcolor);
+    color: var(--accent-color);
+    border: none;
+    border-radius: 32px;
+    width: 120px;
+    height: 32px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+/* Modal styles */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+}
+
+.newBookForm div {
+    display: grid
+
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+/* Body Styles */
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.header {
+    background-color: white;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    padding: 16px;
+    height: 64px;
+}
+
+.header .top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.header .bottom {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+}
+
+.logo {
+    justify-content: right;
+}
+
+.sidebar {
+    background: #1C6EA4;
+    background: -moz-linear-gradient(left, var(--accent-bgcolor) 0%, #2388CB 50%, #144E75 100%);
+    background: -webkit-linear-gradient(left, var(--accent-bgcolor) 0%, #2388CB 50%, #144E75 100%);
+    background: linear-gradient(to right, var(--accent-bgcolor) 0%, #2388CB 50%, #144E75 100%);
+    color: var(--accent-color);
+    grid-row: 1 / 3;
+}
+
+.content {
+    background-color: var(--content-color);
+    display: grid;
+    grid-template-columns: 2fr 250px;
+}
+
+.box1 {
+    grid-row: 1 / 3
+}
+
+.bookcards {
+    display: grid;
+    width: 2fr;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 16px;
+    margin: 32px
+}
+
+.bookcards div {
+    background-color: white;
+    border-radius: 0px 8px 8px 0px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    height: 200px;
+    width: 300px;
+    padding: 16px;
+    border-left: 5px solid lightcoral;
+}
+
+.bookcards div:hover {
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    border-left: 5px solid blue;
+    transition: box-shadow 0.8s, border-left-color 0.8s;
+}
+
+/* .description div {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+} */
+
+
+.description div {
+    opacity: 1;
+    background-color: white;
+    border-radius: 8px 8px 8px 8px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    padding: 16px;
+    margin-right: 32px;
+    /* transition: box-shadow 0.8s, border-left-color 0.8s; */
+}
+
+.otherbooks div {
+    background-color: white;
+    border-radius: 8px 8px 8px 8px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    padding: 16px;
+    margin-right: 32px;
+}
+
+.nav, .utilities {
+    width: 200px; /* Adjust the width of the sidebar */
+    color: #fff; /* Text color */
+    padding-top: 24px;
+}
+
+.nav ul, .utilities ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li a, .utilities ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+}
+
+.nav ul li a:hover, .utilities ul li a:hover {
+    background-color: #1a84e8; /* Hover background color */
+}
