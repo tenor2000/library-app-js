@@ -63,7 +63,7 @@
     <dialog id="book-entry-modal" class="modal">
         <div class="modal-content">
             <button id="closeBtn" class="close">&times;</button>
-            <form id="newBookForm">
+            <form id="newBookForm" novalidate>
                 <!-- Form inputs go here -->
                 <p> Please complete for a new book entry.</p>
                 <div>
@@ -76,7 +76,7 @@
                 </div>
                 <div>
                     <label for="page-count-new">Page Count:</label>
-                    <input type="text" id="page-count-new" name="page-count-new" required>
+                    <input type="number" id="page-count-new" name="page-count-new" required>
                 </div>
                 <div>
                     <label for="description-new">Description:</label>
