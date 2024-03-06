@@ -36,15 +36,33 @@ closeBtn.addEventListener('click', () => {
 
 document.getElementById('newBookForm').addEventListener('submit', (event) => {
     event.preventDefault();
-    const title = document.getElementById('title-new').value;
-    const author = document.getElementById('author-new').value;
-    const pageCount = document.getElementById('page-count-new').value;
-    const description = document.getElementById('description-new').value;
-    const newBookEntry = new Book(title, author, pageCount, description);
 
-    addBookToLibrary(newBookEntry);
-    bookEntryModal.close();
-    displayBooks()
+    const titleInput = document.getElementById('title-new');
+    const authorInput = document.getElementById('author-new');
+    const pageCountInput = document.getElementById('page-count-new');
+    const descriptionInput = document.getElementById('description-new');
+    
+    if (titleInput.checkValidity() && authorInput.checkValidity() && pageCountInput.checkValidity() && descriptionInput.checkValidity()) {
+        const title = titleInput.value;
+        const author = authorInput.value;
+        const pageCount = parseInt(pageCountInput.value);
+        const description = descriptionInput.value;
+
+        const newBookEntry = new Book(title, author, pageCount, description);
+
+        addBookToLibrary(newBookEntry);
+        bookEntryModal.close();
+        displayBooks()
+        
+    } else {
+        titleInput.reportValidity();
+        authorInput.reportValidity();
+        pageCountInput.reportValidity();
+        descriptionInput.reportValidity();
+    }
+
+
+    
 });
 
 // display functions
