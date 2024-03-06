@@ -1,17 +1,26 @@
+
+
+class Book {
+    //class methods
+    constructor (title, author, pages, read, description) {
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.pages = pages;
+        this.read = read;
+        this.info = function () {return `${title} by ${author}, ${pages} pages`}
+    }
+
+    isRead() {
+        this.read = this.read === true ? false : true;
+    }
+}
+
 // Example books
 const exampleBook1 = new Book('The Hobbit', 'J.R.R. Tolkien', '250', false, 'An unexpected journey of a vertically challenged homebody and his overly enthusiastic band of treasure-hungry dwarves, featuring a cameo appearance by a gold-obsessed dragon.')
 const exampleBook2 = new Book('It', 'Stephen King', '1100', false, "A clown with a face only a mother could love terrorizes a town, proving that sometimes balloons aren't just for birthday parties.")
 const exampleBook3 = new Book('Leviathan Wakes', 'James S.A. Corey', '580', false, 'When a space detective and a washed-up ship captain team up to solve a mystery, they discover that space zombies and interstellar politics make for one wild ride through the cosmos.')
 const myLibrary = [exampleBook1, exampleBook2, exampleBook3];
-
-function Book(title, author, pages, read, description) {
-    this.title = title;
-    this.author = author;
-    this.description = description;
-    this.pages = pages;
-    this.read = read;
-    this.info = function () {return `${title} by ${author}, ${pages} pages`}
-}
 
 // Book entry functions
 const bookEntryModal = document.getElementById('book-entry-modal');
